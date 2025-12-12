@@ -1,12 +1,12 @@
 version: "3"
 services:
-  darts-matcher-web:
+  darts-matcher-legacy-web:
     restart: always
-    image: darts-matcher-web
-    container_name: darts-matcher-web
+    image: darts-matcher-legacy-web
+    container_name: darts-matcher-legacy-web
     build:
       context: .
       args:
-        - PROFILE=dev # Accepts dev, prod-pi, prod-heroku
+        - PROFILE=dev # Accepts dev, prod-pi
     ports:
       - "4200:80"

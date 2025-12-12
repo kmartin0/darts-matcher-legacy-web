@@ -12,9 +12,9 @@ import {
 } from '../configure-match-player-dialog/configure-match-player-dialog.component';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
-import {CustomValidators} from '../../validators/custom-validators';
 import {ApiErrorBody} from '../../../api/error/api-error-body';
 import {ApiErrorEnum} from '../../../api/error/api-error.enum';
+import {CustomValidators} from '../../validators/custom-validators';
 
 @Component({
   selector: 'app-match-form',

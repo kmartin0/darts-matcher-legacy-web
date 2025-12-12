@@ -1,8 +1,8 @@
-# Darts Matcher Web Application
+# Legacy Darts Matcher Web Application
 
-Web application for Darts Matcher platform which lets users create and play (online) darts matches against other players or bots.
+Web application for Legacy Darts Matcher platform which lets users create and play (online) darts matches against other players or bots.
 
-Demo: https://darts-matcher-web.herokuapp.com/
+Demo: https://legacy.dartsmatcher.kmartin.nl
 
 ## Features
 

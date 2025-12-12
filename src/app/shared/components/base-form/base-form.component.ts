@@ -27,6 +27,7 @@ export abstract class BaseFormComponent<T> {
     this.updateFormValidity(this.form);
 
     if (this.form.valid) {
+
       this.validForm.emit(this.createFormResult());
     }
   }

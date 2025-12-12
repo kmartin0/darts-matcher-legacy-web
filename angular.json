@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "darts-matcher-web": {
+    "darts-matcher-legacy-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/darts-matcher-web",
+            "outputPath": "dist/darts-matcher-legacy-web",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -45,33 +45,6 @@
             "namedChunks": true
           },
           "configurations": {
-            "prod-heroku": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod-heroku.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            },
             "prod-pi": {
               "fileReplacements": [
                 {
@@ -112,24 +85,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "darts-matcher-web:build"
+            "browserTarget": "darts-matcher-legacy-web:build"
           },
           "configurations": {
-            "prod-heroku": {
-              "browserTarget": "darts-matcher-web:build:prod-heroku"
-            },
             "prod-pi": {
-              "browserTarget": "darts-matcher-web:build:prod-pi"
+              "browserTarget": "darts-matcher-legacy-web:build:prod-pi"
             },
             "development": {
-              "browserTarget": "darts-matcher-web:build:development"
+              "browserTarget": "darts-matcher-legacy-web:build:development"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "darts-matcher-web:build"
+            "browserTarget": "darts-matcher-legacy-web:build"
           }
         },
         "test": {
@@ -160,21 +130,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "darts-matcher-web:serve"
+            "devServerTarget": "darts-matcher-legacy-web:serve"
           },
           "configurations": {
-            "prod-heroku": {
-              "devServerTarget": "darts-matcher-web:serve:prod-heroku"
-            },
             "prod-pi": {
-              "devServerTarget": "darts-matcher-web:serve:prod-pi"
+              "devServerTarget": "darts-matcher-legacy-web:serve:prod-pi"
             },
             "development": {
-              "devServerTarget": "darts-matcher-web:serve:development"
+              "devServerTarget": "darts-matcher-legacy-web:serve:development"
             }
           }
         }
       }
     }},
-  "defaultProject": "darts-matcher-web"
+  "defaultProject": "darts-matcher-legacy-web"
 }

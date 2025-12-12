@@ -19,7 +19,7 @@ ARG PROFILE
 ENV PROFILE $PROFILE
 
 # Generate the build of the application (defaults to dev build if no profile is set)
-# Accepts: prod-heroku, prod-pi, dev
+# Accepts: prod-pi, dev
 RUN npm run build-${PROFILE:-dev}
 
 # Stage 2: Serve app with nginx server
@@ -32,7 +32,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/
 
 # Copy the build output to replace the default nginx contents.
-COPY --from=build /app/dist/darts-matcher-web /usr/share/nginx/html
+COPY --from=build /app/dist/darts-matcher-legacy-web /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80

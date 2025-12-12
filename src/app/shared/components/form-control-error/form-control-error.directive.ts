@@ -77,7 +77,6 @@ export class FormControlErrorDirective implements OnInit, OnDestroy {
   }
 
 }
-
 export const defaultErrors = {
   required: `This field is required`,
   minlength: ({requiredLength, actualLength}) => `This field requires a minimum of ${requiredLength} characters`,
@@ -89,6 +88,7 @@ export const defaultErrors = {
   minLengthArray: ({min, actual}) => `This field requires at least ${min} items`,
   unknown: `An unknown error has occurred.`
 };
+
 
 export const FORM_ERRORS = new InjectionToken('FORM_ERRORS', {
   providedIn: 'root',
